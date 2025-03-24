@@ -1,0 +1,33 @@
+Chapter 12 Self Test
+
+1. Enumeration constants are said to be self-typed. What does this mean?
+R: It means they have their own type inside its declaration
+
+2. What class do all enumerations automatically inherit?
+R: They inherit from java.lang.Enum type
+
+5. Define boxing and unboxing. How does autoboxing/unboxing affect these actions?
+R: 
+Boxing and unboxing refer to the conversion between primitive data types and their corresponding wrapper classes
+Boxing: The process of converting a primitive type (e.g., int, char, double) into an instance of its corresponding wrapper class (Integer, Character, Double, etc.).
+Unboxing: The process of converting a wrapper object back into its corresponding primitive type.
+
+6. Change the following fragment so that it uses autoboxing.
+Short val = new Short(123);
+R: Short val = 123;
+
+7. In your own words, what does static import do?
+R: It acts as a shorcut to use some classes out of the default "lang" package
+
+8. What does this statement do?
+import static java.lang.Integer.parseInt;
+R: It makes possible to the user use the "parseInt" function
+
+10. An annotation is syntactically based on a/an ________________
+R: Interface
+
+11. What is a marker annotation?
+R: A marker annotation is an annotation that does not have any methods
+
+12. An annotation can be applied only to methods. True or False?
+R: False

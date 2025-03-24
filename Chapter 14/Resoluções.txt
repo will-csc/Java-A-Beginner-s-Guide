@@ -1,0 +1,41 @@
+Chapter 14 Self Test
+
+1. What is the lambda operator?
+R: Is a function anonymus function used to simply normal functions
+
+2. What is a functional interface?
+R: A functional interface is a interface with one and only one method
+
+3. How do functional interfaces and lambda expressions relate?
+R: You use functional interface as a declaration in order to use the lambda expressions
+
+4. What are the two general types of lambda expressions?
+R: Stateless and Stateful
+
+5. Show a lambda expression that returns true if a number is between 10 and 20, inclusive.
+R: (x) -> ( x > 9 && x < 21)
+
+10. Can a lambda expression use a local variable? If so, what constraint must be met?
+R: Yes it can, but it must be constant
+
+11. If a lambda expression throws a checked exception, the abstract method in the functional interface must have a throws clause that includes that exception. True or False?
+R: True
+
+12. What is a method reference?
+R: It is a method who can reference another one without it exists
+
+13. When evaluated, a method reference creates an instance of the ____________ ___________ supplied by its target context.
+R: interface funcional
+
+14. Given a class called MyClass that contains a static method called myStaticMethod( ), show how to specify a method reference to myStaticMethod( ).
+R: Classe::métodoEstatico
+
+15. Given a class called MyClass that contains an instance method called myInstMethod( ) and assuming an object of MyClass called mcObj, show how to create a method reference to myInstMethod( ) on mcObj.
+R: objeto::métodoDeInstância
+
+17. How is a constructor reference specified?
+R: Classe::new
+
+18. Java defines several predefined functional interfaces in what package?
+R: java.util.function
+

@@ -1,0 +1,32 @@
+Chapter 11 Self Test
+
+1. How does Java’s multithreading capability enable you to write more efficient programs?
+R: It allows you to write programs who can do multiple tasks at once and synchronized
+
+2. Multithreading is supported by the _________ class and the ________ interface.
+R: Thread, Runnable
+
+3. When creating a runnable object, why might you want to extend Thread rather than
+implement Runnable?
+R: With thread you can instanciate a class and use his default functions
+
+4. Show how to use join( ) to wait for a thread object called MyThrd to end.
+R: Tr{MyThrd.join() ...}
+
+5. Show how to set a thread called MyThrd to three levels above normal priority.
+R: MyThrd.setPriority(NORM_PRIORITY + 3)
+
+6. What is the effect of adding the synchronized keyword to a method?
+R: It makes the thread more safe, which ensures its controlled
+
+7. The wait( ) and notify( ) methods are used to perform _______________________.
+R: communication with other methods
+
+9. Why can’t you use suspend( ), resume( ), and stop( ) for new programs?
+R: The methods suspend(), resume(), and stop() in Java's Thread class are deprecated and should not be used in new programs due to several serious issues.
+
+10. What method defined by Thread obtains the name of a thread?
+R: getName()
+
+11. What does isAlive( ) return?
+R: Return a true value
