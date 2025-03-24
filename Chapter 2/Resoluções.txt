@@ -1,0 +1,40 @@
+Chapter 2 Self Test
+
+1. Why does Java strictly specify the range and behavior of its primitive types?
+R: Because it can cause error during the execution, for example, add two different types
+
+2. What is Java’s character type, and how does it differ from the character type used by some
+other programming languages?
+R: The Java character type is the "char" and it have more bits (16 instead of 8) than the others because of the ASCII code
+
+3. A boolean value can have any value you like because any non-zero value is true. True or False?
+R: False
+
+5. What is wrong with this fragment?
+for(i = 0; i < 10; i++) {
+int sum;
+sum = sum + i;
+}
+System.out.println("Sum is: " + sum);
+
+R: The variable "sum" is being created two times, it should be out the "for" block
+
+6. Explain the difference between the prefix and postfix forms of the increment operator
+R: 
+Prefix ++x - The variable is incremented first before being used in the expression.
+Postfix x++ - The current value of the variable is used in the expression first, so incremented after
+
+7. Show how a short-circuit AND can be used to prevent a divide-by-zero error.
+R: if (denominator != 0 && (numerator / denominator > 1))
+
+8. In an expression, what type are byte and short promoted to?
+R: they are promoted to an int type
+
+9. In general, when is a cast needed?
+R: When you need to treat that variable with others variables, that are different types
+
+11. Does the use of redundant parentheses affect program performance?
+R: Yes
+
+12. Does a block define a scope?
+R: Yes
