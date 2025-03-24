@@ -1,0 +1,76 @@
+Chapter 10 Self Test
+
+1. Why does Java define both byte and character streams?
+R: Because can be two types of characters, 16-bit and byte
+
+2. Even though console input and output is text-based, why does Java still use byte streams for
+this purpose?
+R: Java's use of byte streams because it ensures compatibility with various platforms
+
+3. Show how to open a file for reading bytes.
+R: 
+try (FileInputStream fis = new FileInputStream(filePath)) {
+            int byteData;
+            while ((byteData = fis.read()) != -1) { // Read byte by byte
+                System.out.print((char) byteData); // Convert and print character
+            }
+
+4. Show how to open a file for reading characters
+R: 
+String filePath = "example.txt"; // Path to the file
+
+        try (FileReader fr = new FileReader(filePath)) {
+            int charData;
+            while ((charData = fr.read()) != -1) { // Read character by character
+                System.out.print((char) charData); // Print the character
+            }
+
+5. Show how to open a file for random-access I/O.
+R: 
+try (RandomAccessFile raf = new RandomAccessFile(filePath, "rw")) { // Open for read/write
+            // Writing data to the file at specific positions
+            raf.writeUTF("Hello, World!"); // Write a string
+
+            // Move the file pointer to the beginning
+            raf.seek(0);
+
+            // Reading data from the file
+            String message = raf.readUTF();
+            System.out.println("Read from file: " + message);
+
+            // Move to a specific position and overwrite part of the file
+            raf.seek(7);
+            raf.writeUTF("Java!");
+
+            // Move back and read again
+            raf.seek(0);
+            System.out.println("Updated content: " + raf.readUTF());
+
+        } catch (IOException e) {
+            System.err.println("Error handling the file: " + e.getMessage());
+        }
+
+6. How can you convert a numeric string such as "123.23" into its binary equivalent?
+R: 
+String numStr = "123"; // Numeric string
+        int num = Integer.parseInt(numStr); // Convert to integer
+        String binary = Integer.toBinaryString(num); // Convert to binary
+
+What type of stream is System.in?
+R: InputStream
+
+10. What does the read( ) method of InputStream return when the end of the stream is
+reached?
+R: -1
+
+11. What type of stream is used to read binary data?
+R: Byte Stream
+
+12. Reader and Writer are at the top of the ____________ class hierarchies
+R: character stream
+
+13. The try-with-resources statement is used for ___________ ____________ ____________.
+R: automatically closing resources.
+
+14. If you are using the traditional method of closing a file, then closing a file within a finally block is generally a good approach. True or False?
+R: True

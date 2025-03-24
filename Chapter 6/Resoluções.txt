@@ -1,0 +1,61 @@
+Chapter 6 Self Test
+
+1. Given this fragment,
+class X {
+	private int count;
+is the following fragment correct?
+	class Y {
+		public static void main(String args[]) {
+			X ob = new X();
+			ob.count = 10;
+R: Wrong, count is private
+
+2. An access modifier must __________ a member’s declaration.
+R: Precedes
+
+5. Is the following fragment correct?
+class X {
+	int meth(int a, int b) { ... }
+	String meth(int a, int b) { ... }
+R:Wrong, the function "meth" must return the same types
+
+7. If all objects of a class need to share the same variable, how must you declare that variable?
+R: declare it static
+
+8. Why might you need to use a static block?
+R: To run a block of code when you instanciate a class
+
+9. What is an inner class?
+R: A class inside another class
+
+10. To make a member accessible by only other members of its class, what access modifier must be used?
+R: private
+
+11. The name of a method plus its parameter list constitutes the method’s _______________.
+R: signature
+
+12. An int argument is passed to a method by using call-by-_______________.
+R: value
+
+14. Can a varargs method be overloaded?
+R: Yes
+
+15. Show an example of an overloaded varargs method that is ambiguous.
+R: 
+public class AmbiguousOverload {
+    
+    // First overloaded method with varargs of int
+    static void display(int... values) {
+        System.out.println("int varargs method");
+    }
+    
+    // Second overloaded method with varargs of double
+    static void display(double... values) {
+        System.out.println("double varargs method");
+    }
+    
+    public static void main(String[] args) {
+        display(); // This call is AMBIGUOUS
+    }
+}
+

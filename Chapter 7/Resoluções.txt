@@ -1,0 +1,50 @@
+Chapter 7 Self Test
+
+1. Does a superclass have access to the members of a subclass? Does a subclass have access to
+the members of a superclass?
+R: No, the super doesn't have access. Yes, the sub has access
+
+3. How do you prevent a subclass from having access to a member of a superclass?
+R: You use the "private" keyword
+
+4. Describe the purpose and use of the two versions of super described in this chapter.
+R: It is used to access and use the members from the superclass inside the subclass, and its constructor
+
+5. Given the following hierarchy:
+	class Alpha { ...
+	class Beta extends Alpha { ...
+	Class Gamma extends Beta { ...
+In what order do the constructors for these classes complete their execution when a Gamma
+object is instantiated?
+R: Alpha -> Betha -> Gamma
+
+6. A superclass reference can refer to a subclass object. Explain why this is important as it
+relates to method overriding.
+R: We can create an object of the super class and instanciate the subclass, so it correlates the methos when created.
+Example -> Animal myanimal = new Dog();
+
+7. What is an abstract class?
+R: Is an object used like a model, a template, for create other classes. Like "animal"
+
+8. How do you prevent a method from being overridden? How do you prevent a class from
+being inherited?
+R: You use the "final" keyword
+
+9. Explain how inheritance, method overriding, and abstract classes are used to support
+polymorphism.
+R: 
+Inheritance -> A subclass takes the methods and variables inside the superclass
+Method overriding -> A subclass can override a method from the super class, with other method with the same name
+Abstract classes -> This kind of class is used, only, for template for others classes. so, you can't instanciate them
+
+Polymorphism help you to change methods and variable behavior when needed, so theses concepts are a piece of cake on this
+
+10. What class is a superclass of every other class?
+R: The Object class
+
+11. A class that contains at least one abstract method must, itself, be declared abstract.
+True or False?
+R: True
+
+12. What keyword is used to create a named constant?
+R: "Final" keyword
